@@ -1,11 +1,38 @@
-var http=require('http');
+var http = require('http');
+var fs=require('fs');
+http.createServer((req,res)=>
+{
+    fs.writeFile('content.txt','okayokay',(err,data)=>
+    {
+        res.write(data);
+        res.end();
+    })
+}).listen(8080)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*var http=require('http');
 var fs=require('fs');
 http.createServer((req,res)=>{
     fs.appendFile('content.txt','Thankyou!',(err,data)=>{
         res.write(data);
         res.end();
     })
-}).listen(8080)
+}).listen(8080)*/
 
 
 
